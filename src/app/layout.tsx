@@ -17,7 +17,7 @@ const header = (
   </header>
 );
 const footer = (
-  <footer className="border-t mt-6 py-4 text-center">
+  <footer className="border-t my-6 py-2 text-center">
     <h3>
       Made by{" "}
       <a
@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="mx-auto px-6 max-w-3xl bg-slate-100 ">
+      <body className="mx-auto p-6 max-w-3xl bg-slate-100 ">
         {header}
         <main>{children}</main>
         {footer}
