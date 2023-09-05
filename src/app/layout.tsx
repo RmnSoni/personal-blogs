@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
-
+import Image from 'next/image'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -10,20 +10,21 @@ export const metadata: Metadata = {
 }
 
 const header = (
-  <header className='bg-slate-700 rounded-md p-8 my-6'>
+  <header className='bg-slate-700 text-center rounded-md p-8 my-6'>
     <h1 className='text-3xl p-6 text-white'>
       <Link href="/">Raman's Blogs</Link>
     </h1>
   </header>
 )
 const footer = (
-  <footer>
+  <footer className='border-t py-4 text-center'>
     <a href="https://github.com/RmnSoni" target='_blank'>
-      <img
+      <Image
       className='mx-auto'
         src="/vercel.svg"
         alt="Raman's Blogs"
-      width="100px"
+        width={100}
+        height={40}
       />
     </a>
   </footer>
@@ -37,9 +38,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className="mx-auto px-6 max-w-2xl items-center text-center" >
+      <body className="mx-auto px-6 max-w-3xl" >
         {header}
+        <main>
         {children}
+        </main>
         {footer}
       </body>
       

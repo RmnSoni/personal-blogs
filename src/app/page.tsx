@@ -1,18 +1,18 @@
 import Image from "next/image";
 import fs from "fs";
 import Link from "next/link";
-import getPostSlugs from "../../helper/getPostSlugs";
+import getPostSlugs, { PostMetaData } from "../../helper/getPostMetaData";
+import BlogCard from "../components/BlogCard";
+import getPostMetada from "../../helper/getPostMetaData";
 
 export default function Home() {
-
-  const postList = getPostSlugs();
-
+  const postList = getPostMetada();
+  const blogList = postList.map((post: PostMetaData) => (
+    <BlogCard key={post.slug} {...post} />
+  ));
   return (
-    <main className="flex flex-col items-center justify-between p-24 m-8">
-      <h1>My Blogs List</h1>
-      {postList.map((post) => (
-        <Link href={`/posts/${post}`}>{post}</Link>
-      ))}
-    </main>
+    <div className="grid grid-cols-1 md:grid-cols-2">
+      {blogList}
+    </div>
   );
 }
