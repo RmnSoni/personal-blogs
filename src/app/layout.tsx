@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const header = (
   <header className='bg-slate-700 text-center rounded-md p-8 my-6'>
     <h1 className='text-3xl p-6 text-white'>
-      <Link href="/">Raman's Blogs</Link>
+      <Link href="/">Raman&apos;s Blogs</Link>
     </h1>
   </header>
 )
