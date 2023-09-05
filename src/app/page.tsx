@@ -11,7 +11,7 @@ export default function Home() {
     <BlogCard key={post.slug} {...post} />
   ));
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
       {blogList}
     </div>
   );

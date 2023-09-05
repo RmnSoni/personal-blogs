@@ -26,8 +26,10 @@ export default function BlogPost({params}: any){
 
     return (
         <div >
-            <h1>{post.data.title}</h1>
-            <p>{post.data.date}</p>
+            <div className='text-center' >
+            <h1 className=' text-3xl text-slate-800 font-bold' >{post.data.title}</h1>
+            <p className='text-slate-500'>{post.data.date}</p>
+            </div>
             <article className='prose'>
                 <Markdown>
                     {post.content}
