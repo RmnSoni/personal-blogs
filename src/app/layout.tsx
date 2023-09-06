@@ -1,34 +1,58 @@
+"use client"
+
+import DarkModeToggle from "@/components/DarkModeToggle";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import { IoGlobe, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Raman's Blogs",
-};
+// export const metadata: Metadata = {
+//   title: "Raman's Blogs",
+// };
 
 const header = (
-  <header className="bg-slate-700 text-center rounded-md p-8 my-6">
+  <header className="relative bg-slate-700 text-center rounded-md p-8 my-6">
     <h1 className="text-4xl font-bold p-2 text-white">
-      <Link href="/">Raman&apos;s Blogs</Link>
+      <Link href="/">Tech Tales</Link>
     </h1>
-    <p className="text-slate-300">Welcome to my blog</p>
+    <p className="text-slate-300">  My Learnings and Beyond </p>
+    <div className=" absolute top-2 right-2 ">
+    <DarkModeToggle /></div>
   </header>
 );
 const footer = (
-  <footer className="border-t my-6 py-2 text-center">
+  <footer className="border-t mt-6 py-2 text-center">
     <h3>
-      Made by{" "}
-      <a
-        className="hover:text-slate-500"
-        href="https://github.com/RmnSoni"
-        rel="noreffer"
-        target="_blank"
-      >
-        Raman Soni
-      </a>
+      Made by Raman Soni
     </h3>
+    <p className="text-xl">
+      <a
+        href="https://github.com/RmnSoni"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-teal-700 dark:hover:text-teal-400"
+      >
+        <IoLogoGithub className='inline-block mx-2'/>
+      </a>
+      <a
+        href="https://www.ramansoni.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-teal-700 dark:hover:text-teal-400"
+      >
+        <IoGlobe className='inline-block mx-2'/>
+      </a>
+      <a
+        href="https://www.Linkedin.com/in/rmnsoni"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-teal-700 dark:hover:text-teal-400"
+      >
+        <IoLogoLinkedin className='inline-block mx-2'/>
+      </a>
+    </p>
   </footer>
 );
 
@@ -38,8 +62,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="mx-auto p-6 max-w-3xl bg-slate-100 ">
+    <html lang="en" className="dark:bg-slate-950 dark:text-slate-200">
+      <body className="mx-auto p-6 max-w-3xl dark:bg-slate-900 dark:text-slate-200 ">
         {header}
         <main>{children}</main>
         {footer}
