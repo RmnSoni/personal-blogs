@@ -63,6 +63,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark:bg-slate-950 dark:text-slate-200">
+      <head>
+        <title>Tech Tales - ramansoni.in </title>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className="mx-auto p-6 max-w-3xl dark:bg-slate-900 dark:text-slate-200 ">
         {header}
         <main>{children}</main>
