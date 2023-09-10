@@ -6,14 +6,17 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { IoGlobe, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import MouseGradient from "@/components/MouseGradient";
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
 //   title: "Raman's Blogs",
 // };
 
+
+
 const header = (
-  <header className="relative bg-slate-700 text-center rounded-md p-8 my-6">
+  <header className="relative bg-slate-700 text-center rounded-md p-8 mb-6">
     <h1 className="text-4xl font-bold p-2 text-white">
       <Link href="/">Tech Tales</Link>
     </h1>
@@ -67,10 +70,14 @@ export default function RootLayout({
         <title>Tech Tales - ramansoni.in </title>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="mx-auto p-6 max-w-3xl dark:bg-slate-900 dark:text-slate-200 ">
+      <body className=" dark:bg-slate-900 dark:text-slate-200 ">
+        <div className='fixed z-1 w-full pointer-events-none h-screen'><MouseGradient/></div>
+        <div className="z-10 mx-auto p-6 max-w-3xl">
         {header}
         <main>{children}</main>
         {footer}
+        </div>
+        
       </body>
     </html>
   );

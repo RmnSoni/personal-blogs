@@ -4,6 +4,7 @@ import Link from "next/link";
 import getPostSlugs, { PostMetaData } from "../../helper/getPostMetaData";
 import BlogCard from "../components/BlogCard";
 import getPostMetada from "../../helper/getPostMetaData";
+import MouseGradient from "../components/MouseGradient";
 
 export default function Home() {
   const postList = getPostMetada();
