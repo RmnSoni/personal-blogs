@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { IoGlobe, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
-import MouseGradient from "@/components/MouseGradient";
+import MouseGradient from "../components/MouseGradient"
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
@@ -70,9 +70,9 @@ export default function RootLayout({
         <title>Tech Tales - ramansoni.in </title>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className=" dark:bg-slate-900 dark:text-slate-200 ">
+      <body className=" dark:bg-slate-900 dark:text-slate-200 relative">
         <div className='fixed z-1 w-full pointer-events-none h-screen'><MouseGradient/></div>
-        <div className="z-10 mx-auto p-6 max-w-3xl">
+        <div className="relative z-10 mx-auto p-6 max-w-3xl">
         {header}
         <main>{children}</main>
         {footer}
