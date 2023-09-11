@@ -7,6 +7,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import { IoGlobe, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import MouseGradient from "../components/MouseGradient"
+import ScrollToTopButton from "@/components/ScrollToTop";
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
@@ -77,7 +78,9 @@ export default function RootLayout({
         <main>{children}</main>
         {footer}
         </div>
-        
+        <div className="fixed z-20 bottom-2 right-2">
+          <ScrollToTopButton />
+        </div>
       </body>
     </html>
   );
