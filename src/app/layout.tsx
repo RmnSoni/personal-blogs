@@ -73,7 +73,7 @@ export default function RootLayout({
       </head>
       <body className=" dark:bg-slate-900 dark:text-slate-200 relative">
         <div className='fixed z-1 w-full pointer-events-none h-screen'><MouseGradient/></div>
-        <div className="relative z-10 mx-auto p-6 max-w-3xl">
+        <div className="relative z-10 mx-auto p-6 max-w-4xl">
         {header}
         <main>{children}</main>
         {footer}
