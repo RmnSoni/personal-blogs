@@ -9,11 +9,9 @@ export default function MouseGradient(){
             if(!cursor) return;
             const x = event.clientX
             const y = event.clientY
-            console.log(x,y)
             cursor.style.background = `radial-gradient(circle at ${x}px ${y}px, 
                 rgba(45,212,192,0.15), rgba(0, 0, 0, 0) 
                 50% )`;
-            
         }
         document.addEventListener('mousemove', handleMouseMove);
         

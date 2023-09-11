@@ -3,11 +3,11 @@ import { PostMetaData } from "../../helper/getPostMetaData";
 
 export default function BlogCard(post: PostMetaData) {
   return (
-    <div className=" group p-4 rounded-md dark:shadow-teal-950 dark:hover:shadow-teal-800 hover:shadow-xl shadow-md dark:bg-slate-800 ">
+    <div className="z-10 group p-4 rounded-md bg-slate-100 dark:shadow-teal-950 dark:hover:shadow-teal-800 hover:shadow-xl shadow-md bg-opacity-80 dark:bg-slate-800 ">
       <p className=" text-sm dark:text-slate-400 text-slate-600">{post.date}</p>
       <Link
         href={`/posts/${post.slug}`}
-        className=" text-lg text-teal-700 dark:text-teal-400 
+        className=" text-lg text-teal-700  dark:text-teal-400 
          hover:text-slate-700 dark:hover:text-slate-400
         font-semibold group-hover:font-black "
       >
