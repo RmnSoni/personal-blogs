@@ -87,7 +87,7 @@ this property is equivalent to the CSS attribute shown below (with numbers inste
 We need to take care of a few important points here:
 1. The cursor element should be pass through, so that we can still interact with other elements on the page.
 2. To make this element always visible  the position attribute must be set to fixed.
-3. If you have some text or other content on the page, make sure to change the z-index accordinly.
+3. If you have some text or other content on the page, make sure to change the z-index accordingly, such that the cursor effect does not block the content.
 
 Here is the CSS I used for this example.
 
