@@ -9,6 +9,8 @@ In this blog, I will show you the journey I took to implement a gradient effect 
 *The final result by following this 'guide' will look like this.* 
 ![final result of this guide](/images/mouse-gradient/final.gif)
 
+> Please note that a gradient effect alone appears quite simple, but if placed with visual elements like dark backgrounds and traslucent cards, it can be enhanced into effects of glow and depth.
+
 ## The Approach
 
 My implementation of the mouse hover effect is inclined towards the classic usage of JavaScript in web design, i.e, the layout and content of page is contained in html files, the styling of this content is done using CSS files and the presentation  is controlled by JS files. 
