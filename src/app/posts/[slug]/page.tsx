@@ -30,7 +30,7 @@ export default function BlogPost({params}: any){
             <h1 className=' text-3xl text-slate-800 dark:text-teal-500 font-bold'>{post.data.title}</h1>
             <p className='text-slate-500'>{post.data.date}</p>
             </div>
-            <article className='prose prose-slate dark:prose-invert'>
+            <article className='prose max-w-none md:prose-lg prose-slate dark:prose-invert'>
                 <Markdown>
                     {post.content}
                 </Markdown>
